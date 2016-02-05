@@ -1,10 +1,10 @@
-angular.module('controller-app', [])
+angular.module('controller.api', [])
 
-.controller('AppCtrl', function ($scope, Api) {
+.controller('MyAppCtrl', function ($scope, Api) {
 
 	Api.getApi().then(function(result){
 		console.log(result);
-		$scope.getData = result.data;
+		$scope.list = result.data;
 	})
 
 })

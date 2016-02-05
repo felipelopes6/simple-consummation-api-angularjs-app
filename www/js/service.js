@@ -1,19 +1,17 @@
-angular.module('service-app', [])
+angular.module('service.api', [])
 
 .factory('Api', function ($http) {
 
-	var API = 'http://globoesporte.globo.com/servico/equipe/sport/jogos.json';
-	console.log(API)
+	var API = 'http://jsonplaceholder.typicode.com/posts';
 
 	return {
 
 		getApi: function() {
-      return $http({
-        url: API,
-        method: 'GET'
-      })
-    }
+			return $http({
+				url: API,
+				method: 'GET'
+			})
+		}
 
 	};
-
 })
